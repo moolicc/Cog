@@ -25,6 +25,11 @@ namespace Cog
                 }
             }
 
+            if(targetType == typeof(string))
+            {
+                return value;
+            }
+            
             var result = JsonSerializer.Deserialize(value, targetType);
             return result;
         }
